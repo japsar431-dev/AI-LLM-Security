@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>AI Security Assistant</title>
+
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0f172a;
+            color: white;
+            text-align: center;
+            padding-top: 100px;
+        }
+
+        .container {
+            width: 600px;
+            margin: auto;
+            background: #1e293b;
+            padding: 40px;
+            border-radius: 20px;
+        }
+
+        input {
+            width: 70%;
+            padding: 15px;
+            border-radius: 10px;
+            border: none;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 15px 25px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .answer {
+            margin-top: 30px;
+            padding: 20px;
+            background: #334155;
+            border-radius: 10px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🤖 AI Security Assistant</h1>
+
+    <form method="POST">
+
+        <input
+            type="text"
+            name="query"
+            placeholder="Ask your question..."
+            required
+        >
+
+        <button type="submit">Ask</button>
+
+    </form>
+
+    {% if answer %}
+
+    <div class="answer">
+
+        <h3>Answer</h3>
+
+        <p>{{ answer }}</p>
+
+    </div>
+
+    {% endif %}
+
+</div>
+
+</body>
+</html>
